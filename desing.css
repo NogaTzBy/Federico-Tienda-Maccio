@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+h4{font-size: 1.7em;}
+p{font-size: 1.3em;}
+
+button{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #9D5DC3;
+    transition: all 0.7s;
+    margin-top: 35px;
+}
+
+button:hover{
+    background-color: #774792;
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{color: #9D5DC3;}
+
+header{
+    background-color: rgb(245,245,245);
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: #9D5DC3;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+header a:hover{
+    color: #9D5DC3;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/fondo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+#hero button{
+    font-size: 1.75em;
+}
+
+#somos-proya .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#caracteristicas{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#caracteristicas .container{
+    padding: 150px 12px;
+}
+
+#caracteristicas h2{
+    margin-top: 0;
+    font-size: 3.5em;
+}
+
+#caracteristicas p{
+    display: none;
+}
+
+#caracteristicas .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 45px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/importadas.jpg");
+}
+
+.carta.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/precio.jpg");
+}
+
+.carta.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5), 
+        rgba(0,0,0,0.5)
+    )
+    ,url("media/devolucion.jpg");
+}
+
+#compra-ya{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #000;
+    height: 80vh;
+}
+
+#compra-ya h2{
+    font-size: 9vw;
+}
+
+#compra-ya button{
+    font-size: 5vw;
+}
+
+footer {
+    background-color: #1E1E1E;
+}
+
+footer p{
+    margin: 0;
+    color: rgb(100,100,100);
+    padding: 12px;
+}
+
+footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #somos-proya .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos-proya .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        display: flex;
+        padding-left: 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos-proya h2{
+        margin-top: 0;
+    }
+
+    #somos-proya .img-container{
+        background-image: url("media/quienes-somos.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #caracteristicas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #caracteristicas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #caracteristicas h3{
+        margin-top: 0;
+    }
+
+    #caracteristicas .carta{
+        padding: 15px;
+    }
+
+    #compra-ya h2{
+        font-size: 5vw;
+    }
+
+    #compra-ya button{
+        font-size: 3vw;
+    }
+}
